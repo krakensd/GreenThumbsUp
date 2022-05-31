@@ -1,0 +1,27 @@
+Birdly
+Birdly!02385
+
+Admin token
+pbkdf2_sha256 iterations: 320000 salt: qsfNGc**************** hash: rN0wUx**************************************
+
+
+AWS_ACCESS_KEY_ID=AKIAZGWPJJ3BJW4PKPQ3
+AWS_SECRET_ACCESS_KEY=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
+S3_BUCKET=planterpot
+S3_BASE_URL=https://s3-us-west-1.amazonaws.com/
+SECRET_KEY=django-insecure-dq8xb0g0epo1brqsd1+=2!h%#i+@fxn_ps#7$-^#xo&=sc)u1-
+
+
+(env) ?  greenthumbsup git:(profile) ? heroku pg:credentials:url -a greenthumbsup
+Connection information for default credential.
+Connection info string:
+   "dbname=d6m8krcajtvsps host=ec2-34-231-177-125.compute-1.amazonaws.com port=5432 user=cdhakkjzinurlo password=bad0874ec726b02536b88e41d1b2323f90009a400da16743444e477bfc0bf4fb sslmode=require"
+Connection URL:
+   postgres://cdhakkjzinurlo:bad0874ec726b02536b88e41d1b2323f90009a400da16743444e477bfc0bf4fb@ec2-34-231-177-125.compute-1.amazonaws.com:5432/d6m8krcajtvsps
+(env) ?  greenthumbsup git:(profile) ? 
+
+d6m8krcajtvsps host=ec2-34-231-177-125.compute-1.amazonaws.com
+
+cdhakkjzinurlo
+bad0874ec726b02536b88e41d1b2323f90009a400da16743444e477bfc0bf4fb
+d6m8krcajtvsps
