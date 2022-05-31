@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Green Thumbs Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/9c55a8de8f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="navbar-fixed">
+        <nav style="background-color: #006064">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"></a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <a class="brand-logo hide-on-large-only" style="white-space: nowrap;" href="{% url 'home' %}">
+                    &nbsp;<i class="material-icons">thumb_up</i>&nbsp;<span style="font-family: 'Italiana', serif;">Green Thumbs Up</span>&emsp;&emsp;
+                </a>
+                <ul class="hide-on-med-and-down">
+                    <li><a href="{% url 'home' %}">&emsp;&emsp; Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'index' %}">Community Plants</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'my_plants' %}">My Plants</a></li>
+                        <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
+                        <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
+                        <li><a href="{% url 'fertilizers_index' %}">All Fertilizers</a></li>
+                        <div class="right">
+                            <li><h5 style="color: #18FFFF">&nbsp;&nbsp; Hi {{ user }}! &emsp;</h5></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
+                            <li><i class="material-icons">account_circle</i></li>&emsp;&emsp;&emsp;&emsp;
+                        </div>
+                    {% else %}
+                        <li style="position: fixed; right: 120px;"><a href="{% url 'signup' %}">Sign Up</a></li>
+                        <li style="position: fixed; right: 50px;"><a href="{% url 'login' %}">Log In</a></li>
+                        <li style="position: fixed; right: 20px;"><i class="material-icons">account_circle</i></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <ul class="sidenav" id="mobile-links" style="background-color: #FFE082">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'index' %}">Community Plants</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'my_plants' %}">My Plants</a></li>
+            <li><a href="{% url 'plants_create' %}">Add a Plant</a></li>
+            <li><a href="{% url 'fertilizers_create' %}">Add a Fertilizer</a></li>
+            <li><a href="{% url 'fertilizers_index' %}">All Fertilizers</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+        {% else %}
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'login' %}">Log In</a></li>
+        {% endif %}
+    </ul>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <center>
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_srcvuh0h.json"  
+            background="transparent"  
+            speed="1"  
+            style="width: 500px; height: 300px;"  
+            loop autoplay>
+        </lottie-player>
+    </center>
+
+    <footer class="page-footer" style="background-color: #006064; color: #18FFFF">
+        <div class="right">All Rights Reserved, &copy; 2022 Team BMR &emsp;&emsp;</div>
+    </footer>
+
+    <script>    
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        }); 
+    </script>
+
+</body>
+</html>

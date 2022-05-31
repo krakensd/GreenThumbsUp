@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<center>
+<p id="web-title" class="center" style="font-size: 5em; font-weight: 900; color: #6D4C41; font-family: 'Italiana', serif;">Green Thumbs Up</p>
+<div class="container">
+    <div class="carousel">
+        {% for photo in photos %}
+        <a class="carousel-item" href="{% url 'index' %}"><img src="{{ photo.url }}"></a>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+</script>
+
+{% endblock %}
