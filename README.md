@@ -8,10 +8,6 @@
 
 <B>B</B>  `@krakensd`         https://github.com/krakensd
 
-<B>M</B>  `@m3lfrancisco`      https://github.com/m3lfrancisco
-
-<B>R</B>   `@roob19`           https://github.com/Roob19
-
 Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 
 <img src="https://imgur.com/GZCllNi.png" />
@@ -81,7 +77,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 * Make it mobile ready and lite.
 
 ### **What did We learn:** 
-**Above All TEAMWORK !!!**
 
 * PostgreSQL
   * PGADMIN
@@ -124,9 +119,6 @@ Launch GreenThumbsUp : [**Here**](https://greenthumbsup.herokuapp.com//)
 
 Greenthumbsup Deployed at :**  **https://greenthumbsup.herokuapp.com**
 Wireframe:**  **https://whimsical.com/bmrs-greenthumbsup-yGVgyBMuuiL7R3QsuQnjs**
-Readme:**  **https://github.com/m3lfrancisco/greenthumbsup****
-Git Hub***:      **https://github.com/m3lfrancisco/greenthumbsup**
-GitHub Project-3:   **https://github.com/m3lfrancisco/greenthumbsup/projects**
 [ERD] **(https://lucid.app/lucidchart/88e4fc2f-7bd4-45dc-9754-6f9ecc78b022/edit?invitationId=inv_dbe4d151-4bc3-4b70-ac24-9c4416f829d7&referringApp=slack&page=0_0#)**
 
 https://greenthumbsup.herokuapp.com|
